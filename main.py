@@ -1,6 +1,6 @@
 """
 RFID Card Top-Up System - ESP8266 Edge Controller
-Team: Darius_Divine_Louise
+Team: Roger_Don_Durkheim
 """
 
 import time
@@ -13,7 +13,7 @@ from machine import Pin, SPI
 from mfrc522 import MFRC522
 
 # ================= CONFIGURATION =================
-TEAM_ID = "Darius_Divine_Louise"
+TEAM_ID = "Roger_Don_Durkheim"
 WIFI_SSID = "RCA"
 WIFI_PASS = "@RcaNyabihu2023"
 MQTT_BROKER = "broker.benax.rw"

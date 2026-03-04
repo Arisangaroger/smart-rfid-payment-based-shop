@@ -1,13 +1,13 @@
-# 💳 DaryWise — RFID Smart Shopping & Wallet System
+# 💳 Roger — RFID Smart Shopping & Wallet System
 
-> **Team:** Darius_Divine_Louise  
-> **Live Dashboard:** [http://157.173.101.159:9257/](http://157.173.101.159:9257/)
+> **Team:** Roger_Don_Durkheim  
+> **Live Dashboard:** [http://157.173.101.159:9203/](http://157.173.101.159:9203/)
 
 ---
 
 ## 📖 Overview
 
-DaryWise is an embedded IoT system that enables cashless shopping using RFID cards. Customers tap their registered RFID card to authenticate, add products to a cart (also identified by RFID tags), and pay directly from their digital wallet — all in real time.
+Roger is an embedded IoT system that enables cashless shopping using RFID cards. Customers tap their registered RFID card to authenticate, add products to a cart (also identified by RFID tags), and pay directly from their digital wallet — all in real time.
 
 The system consists of three layers:
 
@@ -21,13 +21,13 @@ The system consists of three layers:
 
 | Resource | URL |
 |----------|-----|
-| 🖥️ Admin Dashboard | [http://157.173.101.159:9257/](http://157.173.101.159:9257/) |
-| 🔌 REST API Base | `http://157.173.101.159:9257/api` |
-| 📡 WebSocket | `ws://157.173.101.159:9257` |
+| 🖥️ Admin Dashboard | [http://157.173.101.159:9203/](http://157.173.101.159:9203/) |
+| 🔌 REST API Base | `http://157.173.101.159:9203/api` |
+| 📡 WebSocket | `ws://157.173.101.159:9203` |
 
 **Default Admin Credentials:**
 ```
-Email:    admin@darywise.com
+Email:    admin@roger.com
 Password: admin123
 ```
 
@@ -109,7 +109,7 @@ Server starts at `http://localhost:3000` (or the configured `PORT`).
 
 ### 4. Open the Dashboard
 
-Visit: [http://157.173.101.159:9257/](http://157.173.101.159:9257/)
+Visit: [http://157.173.101.159:9203/](http://157.173.101.159:9203/)
 
 ---
 
@@ -121,7 +121,7 @@ Create a `.env` file or set these variables before starting the server:
 |----------|---------|-------------|
 | `PORT` | `3000` | HTTP server port |
 | `MONGO_URI` | `mongodb://127.0.0.1:27017` | MongoDB connection string |
-| `DB_NAME` | `darywise_db` | MongoDB database name |
+| `DB_NAME` | `roger_db` | MongoDB database name |
 | `MQTT_BROKER` | `mqtt://broker.benax.rw:1883` | MQTT broker URL |
 
 ---
@@ -132,10 +132,10 @@ All topics are namespaced under the team ID:
 
 | Topic | Direction | Description |
 |-------|-----------|-------------|
-| `rfid/Darius_Divine_Louise/card/status` | ESP → Backend | Card scan event |
-| `rfid/Darius_Divine_Louise/card/topup` | Backend → ESP | Top-up confirmation |
-| `rfid/Darius_Divine_Louise/card/pay` | Backend → ESP | Payment confirmation |
-| `rfid/Darius_Divine_Louise/card/balance` | ESP → Backend | Balance update |
+| `rfid/Roger_Don_Durkheim/card/status` | ESP → Backend | Card scan event |
+| `rfid/Roger_Don_Durkheim/card/topup` | Backend → ESP | Top-up confirmation |
+| `rfid/Roger_Don_Durkheim/card/pay` | Backend → ESP | Payment confirmation |
+| `rfid/Roger_Don_Durkheim/card/balance` | ESP → Backend | Balance update |
 
 ---
 
@@ -236,7 +236,7 @@ This rehashes `admin123` and updates the admin record in MongoDB.
 
 ## 👥 Team
 
-**Darius_Divine_Louise**
+**Roger_Don_Durkheim**
 
 ---
 

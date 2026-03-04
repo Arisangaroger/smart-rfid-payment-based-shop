@@ -1,6 +1,6 @@
 /**
  * RFID Card Top-Up System - Backend API Service
- * Team: Darius_Divine_Louise
+ * Team: Roger_Don_Durkheim
  * Database: MongoDB (migrated from MySQL)
  */
 
@@ -15,13 +15,13 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 
 // ================= CONFIGURATION =================
-const TEAM_ID = "Darius_Divine_Louise";
-const PORT = process.env.PORT || 3000;
+const TEAM_ID = "Roger_Don_Durkheim";
+const PORT = 3000;
 const MQTT_BROKER = process.env.MQTT_BROKER || "mqtt://broker.benax.rw:1883";
 
 // MongoDB Configuration
 const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017";
-const DB_NAME = process.env.DB_NAME || "darywise_db";
+const DB_NAME = process.env.DB_NAME || "roger_db";
 
 let db;
 
@@ -36,7 +36,7 @@ async function initDB() {
     await db.collection("users").createIndex({ email: 1 }, { unique: true });
     await db.collection("products").createIndex({ rfid_uid: 1 }, { unique: true });
 
-    console.log("[MongoDB] Connected to DaryWise database");
+    console.log("[MongoDB] Connected to Roger database");
   } catch (error) {
     console.error("[MongoDB] Connection failed:", error.message);
   }
@@ -45,9 +45,9 @@ async function initDB() {
 initDB();
 
 // MQTT Topics
-const TOPIC_STATUS  = `rfid/${TEAM_ID}/card/status`;
-const TOPIC_TOPUP   = `rfid/${TEAM_ID}/card/topup`;
-const TOPIC_PAY     = `rfid/${TEAM_ID}/card/pay`;
+const TOPIC_STATUS = `rfid/${TEAM_ID}/card/status`;
+const TOPIC_TOPUP = `rfid/${TEAM_ID}/card/topup`;
+const TOPIC_PAY = `rfid/${TEAM_ID}/card/pay`;
 const TOPIC_BALANCE = `rfid/${TEAM_ID}/card/balance`;
 
 // ================= EXPRESS SETUP =================
@@ -55,7 +55,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(session({
-  secret: "darywise_secret_key",
+  secret: "roger_secret_key",
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false }
@@ -79,7 +79,7 @@ wss.on("connection", (ws) => {
 
   ws.send(JSON.stringify({
     event: "connection",
-    message: "Connected to DaryWise Server",
+    message: "Connected to Roger Server",
     timestamp: new Date().toISOString()
   }));
 
@@ -453,5 +453,5 @@ app.post("/payment/checkout", async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`\n🚀 DaryWise Server running at http://localhost:${PORT}`);
+  console.log(`\n🚀 Roger Server running at http://localhost:${PORT}`);
 });

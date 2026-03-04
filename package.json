@@ -1,0 +1,29 @@
+{
+  "name": "smart-rfid-payment-based-shop",
+  "version": "1.0.0",
+  "description": "> **Team:** Roger_Don_Durkheim  \r > **Live Dashboard:** [http://157.173.101.159:9257/](http://157.173.101.159:9257/)",
+  "main": "Seed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIYONKURU-DARIUS/smart-rfid-payment-based-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NIYONKURU-DARIUS/smart-rfid-payment-based-shop/issues"
+  },
+  "homepage": "https://github.com/NIYONKURU-DARIUS/smart-rfid-payment-based-shop#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.1.0",
+    "mqtt": "^5.15.0",
+    "ws": "^8.19.0"
+  }
+}
